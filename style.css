@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "kanit";
+  src: url(./asset/font/Kanit-Light.ttf);
+}
+
+* {
+  /* margin: 0; */
+  /* padding: 0; */
+  box-sizing: border-box;
+  font-family: "kanit";
+  list-style: none;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  border: 2px solid;
+  border-radius: 50px;
+  margin: 0 40px;
+  padding: 10px;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.select {
+  border: none;
+  cursor: pointer;
+}
+.form {
+  margin: auto;
+}
+input {
+  outline: none;
+}
+button {
+  background: none;
+  border-radius: 50px;
+  padding: 5px 15px;
+  cursor: pointer;
+}

@@ -5,27 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MarmiMom</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./asset/style/style.css" />
   </head>
   <body>
     <h1>MarmiMom</h1>
     <nav>
       <ul>
-        <li>
-          <button type="text" class="select" id="entries">Entées</button>
-        </li>
-        <li>
-          <button type="text" class="select" id="dishes">Plats</button>
-        </li>
-        <li>
-          <button type="text" class="select" id="desserts">Desserts</button>
-        </li>
+        <li type="text" class="select" id="entries">Entées</li>
+        <li type="text" class="select" id="dishes">Plats</li>
+        <li type="text" class="select" id="desserts">Desserts</li>
       </ul>
-      <div class="form">
-        <input type="text" name="searchBar" id="searchBar" />
+      <form action="">
+        <input id="searchBar" type="text" name="searchBar" />
         <button id="btn">Rechercher</button>
-      </div>
+      </form>
     </nav>
-    <script src="./index.js"></script>
+    <div id="list"></div>
+    <script type="module" src="./index.js"></script>
   </body>
 </html>

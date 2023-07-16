@@ -1,0 +1,11 @@
+
+
+
+
+const { destructuring } = 
+
+
+const destructuring = objet.premier.second
+  destructuring.troisieme
+
+objet.premier.second.troisieme

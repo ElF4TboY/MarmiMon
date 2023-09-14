@@ -1,11 +1,6 @@
-
-
-
-
-const { destructuring } = 
-
-
-const destructuring = objet.premier.second
-  destructuring.troisieme
-
-objet.premier.second.troisieme
+je crée une let vide pour stcker mes li
+je get mon tableau
+je map mon tableau
+je crée un li pour chaque items
+je push chaque li dans ma let
+j'affiche la let dans l html

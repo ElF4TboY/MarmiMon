@@ -1,3 +1,7 @@
+/**
+ * This component mock my DB
+ */
+
 const recipes = [
   {
     classId: "desserts",

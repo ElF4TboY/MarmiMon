@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./asset/style/style.css" />
+    <title>Création de recette</title>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">MarmiMom</a>
+    </nav>
+    <h1>Ajouter une nouvelle recette</h1>
+    <form>
+      <div class="select-type">
+        <label for="type-recipe">Choisir le type de recette</label>
+        <select name="type-recipe" id="">
+          <option value="default">Choisir</option>
+          <option value="entries">Entrée</option>
+          <option value="dishes">Plat</option>
+          <option value="desserts">Dessert</option>
+        </select>
+      </div>
+      <div class="name-recipe">
+        <label for="name">Choisir le nom de la recette</label>
+        <input name="name" type="text" />
+      </div>
+      <div class="add-ingredients">
+        <label for="ingredients">Ajouter le ou les ingrédients</label>
+        <input name="ingredients" type="text" />
+        <button>Ajouter</button>
+      </div>
+      <div class="ad-description">
+        <label for="description">Choisir le nom de la recette</label>
+        <input name="description" type="text" />
+      </div>
+      <button type="submit">Ajouter la recette</button>
+    </form>
+  </body>
+</html>

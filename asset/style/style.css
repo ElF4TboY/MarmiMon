@@ -4,7 +4,6 @@
 }
 
 * {
-  box-sizing: border-box;
   font-family: "kanit";
   list-style: none;
   background: rgb(66, 6, 6);
@@ -15,19 +14,17 @@ nav {
   display: flex;
   justify-content: space-around;
   text-align: center;
+  margin: 10px;
 }
 
 a {
   text-decoration: none;
   font-size: 2rem;
+  width: 500px;
   margin: 20px;
   padding: 0 20px;
   border: solid rgb(247, 204, 13) 2px;
   border-radius: 50px;
-}
-
-form {
-  margin: auto;
 }
 
 input {
@@ -45,20 +42,30 @@ button {
   border: 1px solid rgb(247, 204, 13);
 }
 
-.title-create-recipe {
+h2,
+ul,
+p {
   text-align: center;
 }
 
-.searchBar {
+ul {
+  padding: 0;
+}
+
+p {
+  margin: 16px;
+}
+
+.search-bar {
   display: grid;
   grid-template-columns: 70% 30%;
   border: 2px solid;
   border-radius: 50px;
-  margin: 0 40px;
+  margin: 20px 40px;
   padding: 10px;
 }
 
-.searchBar ul {
+.search-bar ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -68,4 +75,63 @@ button {
 .select {
   border: none;
   cursor: pointer;
+}
+
+.search-input {
+  margin: auto;
+}
+
+.recipe-container {
+  margin: 40px;
+  box-shadow: 1px 0px 20px 1px rgb(247, 204, 13);
+  border: solid rgb(66, 6, 6) 1px;
+  border-radius: 20px;
+}
+
+.title-create-recipe {
+  text-align: center;
+}
+
+.create-new-recipe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.selector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+select {
+  background-color: rgba(247, 204, 13, 0.329);
+  border: solid rgb(247, 204, 13) 1px;
+  border-radius: 50px;
+}
+
+option {
+  text-align: center;
+}
+
+.input {
+  text-align: center;
+  margin-top: 10px;
+  padding: 5px;
+  width: 300px;
+  border-radius: 50px;
+}
+
+#submitBtn {
+  width: 300px;
+  margin-top: 15px;
+  margin-left: 0;
+  padding: 10px;
+}
+
+footer {
+  height: 300px;
+  display: flex;
+  align-items: center;
 }

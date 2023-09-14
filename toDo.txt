@@ -1,1 +1,12 @@
+index.html
 
+recherche par nom de recette ne fonctionne pas
+------------------------------------------------------------------------------------
+createRecipe.html
+
+ajouter des validateurs dans les inputs
+
+
+
+    list.innerHTML =
+      "<h2>Vous devez rechercher avec un nom de recette ou avec un ingredient</h2>";

@@ -14,8 +14,13 @@ selectAll.forEach((select) => {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  selectRecipe(recipes, null, searchBar.value);
-  searchBar.value = "";
+  if (!searchBar.value.length) {
+    list.innerHTML =
+      "<h2>Vous devez rechercher avec un nom de recette ou avec un ingredient</h2>";
+  } else {
+    selectRecipe(recipes, null, searchBar.value);
+    searchBar.value = "";
+  }
 });
 
 searchBar.addEventListener("click", (e) => {

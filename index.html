@@ -11,18 +11,23 @@
     <nav>
       <a href="createRecipe.html">Ajouter une recette</a>
     </nav>
-    <div class="searchBar">
+    <div class="search-bar">
       <ul>
         <li type="text" class="select" id="entries">Entées</li>
         <li type="text" class="select" id="dishes">Plats</li>
         <li type="text" class="select" id="desserts">Desserts</li>
       </ul>
-      <form action="">
+      <form class="search-input">
         <input id="searchBar" type="text" name="searchBar" />
         <button id="btn">Rechercher</button>
       </form>
     </div>
-    <div id="list"></div>
+    <div id="list" class="checked">
+      <h2>
+        Le backend est en cours de réalisation, les données ajoutées ne sont pas
+        persistante et n'apparaîtrons pas sur cette page.
+      </h2>
+    </div>
     <script type="module" src="./index.js"></script>
   </body>
 </html>

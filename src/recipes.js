@@ -2,7 +2,7 @@
  * This component mock my DB
  */
 
-const recipes = [
+export const recipes = [
   {
     classId: "desserts",
     name: "recipe1",
@@ -32,5 +32,3 @@ const recipes = [
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed asperiores perferendis, quibusdam ducimus corrupti aliquam aut hic repellendus enim deleniti!",
   },
 ];
-
-export { recipes };

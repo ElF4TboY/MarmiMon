@@ -10,11 +10,11 @@
     <nav>
       <a href="index.html">MarmiMom</a>
     </nav>
-    <h1>Ajouter une nouvelle recette</h1>
-    <form>
+    <h1 class="title-create-recipe">Ajouter une nouvelle recette</h1>
+    <form class="create-new-recipe">
       <div class="select-type">
-        <label for="type-recipe">Choisir le type de recette</label>
-        <select name="type-recipe" id="">
+        <label for="classId">Choisir le type de recette</label>
+        <select name="classId" id="">
           <option value="default">Choisir</option>
           <option value="entries">Entrée</option>
           <option value="dishes">Plat</option>
@@ -28,13 +28,13 @@
       <div class="add-ingredients">
         <label for="ingredients">Ajouter le ou les ingrédients</label>
         <input name="ingredients" type="text" />
-        <button>Ajouter</button>
       </div>
       <div class="ad-description">
-        <label for="description">Choisir le nom de la recette</label>
+        <label for="description">Décrire la recette</label>
         <input name="description" type="text" />
       </div>
-      <button type="submit">Ajouter la recette</button>
+      <button id="submitBtn" type="submit">Ajouter la recette</button>
     </form>
+    <script type="module" src="./createRecipe.js"></script>
   </body>
 </html>

@@ -26,6 +26,29 @@ a {
   border-radius: 50px;
 }
 
+form {
+  margin: auto;
+}
+
+input {
+  outline: none;
+  border: 1px solid rgb(247, 204, 13);
+  background: rgba(247, 204, 13, 0.329);
+}
+
+button {
+  background: none;
+  border-radius: 50px;
+  margin-left: 20px;
+  padding: 5px 15px;
+  cursor: pointer;
+  border: 1px solid rgb(247, 204, 13);
+}
+
+.title-create-recipe {
+  text-align: center;
+}
+
 .searchBar {
   display: grid;
   grid-template-columns: 70% 30%;
@@ -34,29 +57,15 @@ a {
   margin: 0 40px;
   padding: 10px;
 }
+
 .searchBar ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
   user-select: none;
 }
+
 .select {
   border: none;
   cursor: pointer;
-}
-form {
-  margin: auto;
-}
-input {
-  outline: none;
-  border: 1px solid rgb(247, 204, 13);
-  background: rgba(247, 204, 13, 0.329);
-}
-button {
-  background: none;
-  border-radius: 50px;
-  margin-left: 20px;
-  padding: 5px 15px;
-  cursor: pointer;
-  border: 1px solid rgb(247, 204, 13);
 }

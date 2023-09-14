@@ -13,28 +13,36 @@
     <h1 class="title-create-recipe">Ajouter une nouvelle recette</h1>
     <form class="create-new-recipe">
       <div class="select-type">
-        <label for="classId">Choisir le type de recette</label>
-        <select name="classId" id="">
-          <option value="default">Choisir</option>
-          <option value="entries">Entrée</option>
-          <option value="dishes">Plat</option>
-          <option value="desserts">Dessert</option>
-        </select>
+        <div class="selector">
+          <label for="classId">Choisir le type de recette</label>
+          <select class="input" name="classId">
+            <option value="default">Choisir</option>
+            <option value="entries">Entrée</option>
+            <option value="dishes">Plat</option>
+            <option value="desserts">Dessert</option>
+          </select>
+        </div>
       </div>
-      <div class="name-recipe">
+      <div class="selector">
         <label for="name">Choisir le nom de la recette</label>
-        <input name="name" type="text" />
+        <input class="input" name="name" type="text" />
       </div>
-      <div class="add-ingredients">
+      <div class="selector">
         <label for="ingredients">Ajouter le ou les ingrédients</label>
-        <input name="ingredients" type="text" />
+        <input class="input" name="ingredients" type="text" />
       </div>
-      <div class="ad-description">
+      <div class="selector">
         <label for="description">Décrire la recette</label>
-        <input name="description" type="text" />
+        <input class="input" name="description" type="text" />
       </div>
       <button id="submitBtn" type="submit">Ajouter la recette</button>
     </form>
+    <footer>
+      <h2>
+        Le backend est en cours de réalisation, les données ajoutées ne sont pas
+        persistante et n'apparaîtrons pas sur la page d'affichage des recettes.
+      </h2>
+    </footer>
     <script type="module" src="./createRecipe.js"></script>
   </body>
 </html>

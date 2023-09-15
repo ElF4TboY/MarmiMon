@@ -16,7 +16,7 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   if (!searchBar.value.length) {
     list.innerHTML =
-      "<h2>Vous devez rechercher avec un nom de recette ou avec un ingredient</h2>";
+      "<h2>Vous devez rechercher avec un nom de recette ou avec un nom ingrédient, pour le nom de recette tapez 'recipe'.</h2>";
   } else {
     selectRecipe(recipes, null, searchBar.value);
     searchBar.value = "";

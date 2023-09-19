@@ -1,8 +1,0 @@
-index.html
-
-------------------------------------------------------------------------------------
-createRecipe.html
-
-ajouter des validateurs dans les inputs
-
-

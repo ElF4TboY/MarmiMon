@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 
 import { recipes } from "../database/recipes";
 import { Navigation } from "../components/Navigation";
-import { DisplayRecipe } from "../components/displayRecipe";
+import { DisplayRecipe } from "../components/DisplayRecipe";
 
 export const Root = () => {
   const [show, setShow] = useState(true);

@@ -1,33 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MarmiMom</title>
-    <link rel="stylesheet" href="./asset/style/style.css" />
+    <title>Vite + React</title>
   </head>
   <body>
-    <nav>
-      <a href="createRecipe.html">Ajouter une recette</a>
-    </nav>
-    <div class="search-bar">
-      <ul>
-        <li type="text" class="select" id="entries">Entées</li>
-        <li type="text" class="select" id="dishes">Plats</li>
-        <li type="text" class="select" id="desserts">Desserts</li>
-      </ul>
-      <form class="search-input">
-        <input id="searchBar" type="text" name="searchBar" />
-        <button id="btn">Rechercher</button>
-      </form>
-    </div>
-    <div id="list" class="checked">
-      <h2>
-        Le backend est en cours de réalisation, les données ajoutées ne sont pas
-        persistante et n'apparaîtrons pas sur cette page.
-      </h2>
-    </div>
-    <script type="module" src="./index.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

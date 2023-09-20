@@ -1,6 +1,6 @@
 @font-face {
   font-family: "kanit";
-  src: url(../font/Kanit-Light.ttf);
+  src: url(../assets/font/Kanit-Light.ttf);
 }
 
 * {
@@ -16,7 +16,9 @@ nav {
   text-align: center;
   margin: 10px;
 }
-
+h1 {
+  text-align: center;
+}
 a {
   text-decoration: none;
   font-size: 2rem;

@@ -1,11 +1,14 @@
 import { Navigation } from "../components/Navigation";
 
 export const CreateRecipe = () => {
+  const handleClick = () => {
+    alert("Page en cours de construction");
+  };
   return (
     <div>
       <Navigation />
       <h1 className="title-create-recipe">Ajouter une nouvelle recette</h1>
-      <form className="create-new-recipe">
+      <form className="create-new-recipe" onSubmit={(e) => e.preventDefault()}>
         <div className="select-type">
           <div className="selector">
             <label htmlFor="classNameId">Choisir le type de recette</label>
@@ -29,7 +32,7 @@ export const CreateRecipe = () => {
           <label htmlFor="description">Décrire la recette</label>
           <input className="input" name="description" type="text" />
         </div>
-        <button id="submitBtn" type="submit">
+        <button id="submitBtn" onClick={handleClick}>
           Ajouter la recette
         </button>
       </form>

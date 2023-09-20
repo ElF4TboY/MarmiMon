@@ -1,21 +1,28 @@
 import { useRef, useState } from "react";
 
-import { recipes } from "../database/recipes";
 import { Navigation } from "../components/Navigation";
-import { DisplayRecipe } from "../components/DisplayRecipe";
+import { SelectRecipe } from "../components/Root/SelectRecipe";
 
 export const Root = () => {
   const [show, setShow] = useState(true);
+  const [inputIsEmpty, setInputIsEmpty] = useState(false);
   const [value, setValue] = useState("");
   const inputRef = useRef();
 
   const handleClick = (e) => {
-    if (e.target.id === "btn") {
-      setValue(inputRef.current.value);
-      inputRef.current.value = "";
+    setInputIsEmpty(false);
+    setValue(e.target.id);
+    setShow(false);
+  };
+
+  const handleSubmit = (e) => {
+    if (!inputRef.current.value) {
+      setInputIsEmpty(true);
     } else {
-      setValue(e.target.id);
+      setInputIsEmpty(false);
     }
+    setValue(inputRef.current.value);
+    inputRef.current.value = "";
     setShow(false);
   };
 
@@ -41,7 +48,7 @@ export const Root = () => {
         </ul>
         <form className="search-input" onSubmit={(e) => e.preventDefault()}>
           <input id="searchBar" type="text" name="searchBar" ref={inputRef} />
-          <button id="btn" onClick={handleClick}>
+          <button id="btn" onClick={handleSubmit}>
             Rechercher
           </button>
         </form>
@@ -50,21 +57,10 @@ export const Root = () => {
         {show ? (
           <h2>
             Le backend est en cours de réalisation, les données ajoutées ne sont
-            pas persistante et n'apparaîtrons pas sur cette page.
+            pas persistante et n'apparaîtrons pas sur cette page pour le moment.
           </h2>
         ) : (
-          <>
-            {recipes
-              .filter(
-                (recipe) =>
-                  recipe.classId === value ||
-                  recipe.name.includes(value) ||
-                  recipe.ingredients.includes(value)
-              )
-              .map((recipe, index) => (
-                <DisplayRecipe key={recipe.name + index} recipe={recipe} />
-              ))}
-          </>
+          <SelectRecipe value={value} inputIsEmpty={inputIsEmpty} />
         )}
       </div>
     </div>

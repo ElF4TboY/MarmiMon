@@ -1,14 +1,31 @@
+import { useRef } from "react";
+
 import { Navigation } from "../components/Navigation";
 
 export const CreateRecipe = () => {
-  const handleClick = () => {
-    alert("Page en cours de construction");
+  const nameRef = useRef();
+  const ingredientsRef = useRef();
+  const descriptionRef = useRef();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(`La recette suivante sera prochainement ajouté : 
+    {
+      "classId": "${e.target[0].value}"
+      "name": "${e.target[1].value}",
+      "ingredients": "${e.target[2].value}",
+      d"escription": "${e.target[3].value}"
+    }`);
+    nameRef.current.value = "";
+    ingredientsRef.current.value = "";
+    descriptionRef.current.value = "";
   };
+
   return (
     <div>
       <Navigation />
       <h1 className="title-create-recipe">Ajouter une nouvelle recette</h1>
-      <form className="create-new-recipe" onSubmit={(e) => e.preventDefault()}>
+      <form className="create-new-recipe" onSubmit={handleSubmit}>
         <div className="select-type">
           <div className="selector">
             <label htmlFor="classNameId">Choisir le type de recette</label>
@@ -22,19 +39,27 @@ export const CreateRecipe = () => {
         </div>
         <div className="selector">
           <label htmlFor="name">Choisir le nom de la recette</label>
-          <input className="input" name="name" type="text" />
+          <input className="input" name="name" type="text" ref={nameRef} />
         </div>
         <div className="selector">
           <label htmlFor="ingredients">Ajouter le ou les ingrédients</label>
-          <input className="input" name="ingredients" type="text" />
+          <input
+            className="input"
+            name="ingredients"
+            type="text"
+            ref={ingredientsRef}
+          />
         </div>
         <div className="selector">
           <label htmlFor="description">Décrire la recette</label>
-          <input className="input" name="description" type="text" />
+          <input
+            className="input"
+            name="description"
+            type="text"
+            ref={descriptionRef}
+          />
         </div>
-        <button id="submitBtn" onClick={handleClick}>
-          Ajouter la recette
-        </button>
+        <button id="submitBtn">Ajouter la recette</button>
       </form>
       <footer>
         <h2>
